@@ -1,0 +1,4 @@
+{
+	'description': 'Extension Point for the promart-solution-composer View Providers',
+	'name': 'launchpad-promart-solution-composer-view'
+}

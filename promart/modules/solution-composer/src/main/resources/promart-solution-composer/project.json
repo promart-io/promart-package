@@ -1,0 +1,8 @@
+{
+	"guid": "promart-solution-composer",
+	"repository": {
+		"type": "git",
+		"branch": "master",
+		"url": "https://github.com/promart-io/promart-solution-composer.git"
+	}
+}

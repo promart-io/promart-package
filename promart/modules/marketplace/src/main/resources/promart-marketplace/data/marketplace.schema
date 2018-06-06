@@ -1,0 +1,196 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "PROMART_PRODUCTS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "PRODUCT_ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_NAME",
+                        "type": "VARCHAR",
+                        "length": "32",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_DESCRIPTION",
+                        "type": "VARCHAR",
+                        "length": "512",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_PLAN",
+                        "type": "INTEGER",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_PRICE",
+                        "type": "DOUBLE",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_CATEGORY",
+                        "type": "INTEGER",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_INDUSTRY",
+                        "type": "INTEGER",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_REGION",
+                        "type": "INTEGER",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_COUNTRY",
+                        "type": "INTEGER",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_VENDOR",
+                        "type": "INTEGER",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            },
+            {
+                "name": "ZEUS_PLANS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PLAN_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PLAN_SUPPORT_LEVEL",
+                        "type": "INTEGER",
+                        "length": "",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PLAN_SALES_MODEL",
+                        "type": "INTEGER",
+                        "length": "",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            },
+            {
+                "name": "ZEUS_SUPPORT_LEVELS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "SUPPORT_LEVEL_ID",
+                        "type": "INTEGER",
+                        "length": "",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "SUPPORT_LEVEL_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            },
+            {
+                "name": "ZEUS_SALES_MODELS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "SALES_MODEL_ID",
+                        "type": "INTEGER",
+                        "length": "",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "SALES_MODEL_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

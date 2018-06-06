@@ -1,0 +1,5 @@
+{
+	'description': 'Invoices view',
+	'extensionPoint': 'launchpad-promart-payments-view',
+	'module': 'promart-payments/views/master/Invoices/view.js'
+}

@@ -1,0 +1,4 @@
+{
+	'description': 'Extension Point for the promart-accounts Menu Providers',
+	'name': 'launchpad-promart-accounts-menu'
+}

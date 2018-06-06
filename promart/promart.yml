@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: promart
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: promart
+  namespace: promart
+  labels:
+    app: promart
+spec:
+  ports:
+  - port: 8080
+    name: promart
+  type: NodePort
+  selector:
+    app: promart
+---
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: promart
+  namespace: promart
+spec:
+  serviceName: "promart"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: promart
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: dirigible
+          image: promart
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+              name: promart
+          volumeMounts:
+            - name: root
+              mountPath: /usr/local/tomcat/dirigible
+          env:
+            - name: localRepositoryRootFolder
+              value: /usr/local/tomcat/dirigible/repository
+            - name: localRepositoryRootFolderIsAbsolute
+              value: "true"
+            - name: localDatabaseRootFolder
+              value: /usr/local/tomcat/dirigible/derby
+            - name: localCmisRootFolder
+              value: /usr/local/tomcat/dirigible/cmis
+            - name: initLoggingDirectory
+              value: /tomcat/logs
+            - name: repositoryProviderMaster
+              value: git
+            - name: masterRepositoryGitTarget
+              value: master_git_repository
+            - name: masterRepositoryGitLocation
+              value: https://github.com/dirigiblelabs/promart_setup.git
+            - name: masterRepositoryGitBranch
+              value: origin/master
+      serviceAccountName: promart
+  volumeClaimTemplates:
+    - metadata:
+        name: root
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 1Gi
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/tls-acme: "true"
+  name: promart
+  namespace: promart
+spec:
+  rules:
+    - host: promart.apps.eu-central-1.sap.onvms.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: promart
+              servicePort: 8080
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: promart
+  namespace: promart
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: promart
+rules:
+  - apiGroups:
+    - '*'
+    resources:
+    - '*'
+    verbs:
+    - '*'
+  - nonResourceURLs:
+    - '*'
+    verbs:
+    - '*'
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: promart
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: promart
+subjects:
+  - kind: ServiceAccount
+    name: promart
+    namespace: promart

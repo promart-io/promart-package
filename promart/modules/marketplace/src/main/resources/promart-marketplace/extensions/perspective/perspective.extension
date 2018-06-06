@@ -1,0 +1,5 @@
+{
+	'description': ' perspective',
+	'extensionPoint': 'launchpad-promart-perspective',
+	'module': 'promart-marketplace/extensions/perspective/perspective.js'
+}

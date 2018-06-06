@@ -1,0 +1,5 @@
+{
+	'description': 'Components view',
+	'extensionPoint': 'launchpad-promart-component-registry-view',
+	'module': 'promart-component-registry/views/Components/view.js'
+}

@@ -1,0 +1,85 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "PROMART_COMPONENTS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "COMPONENT_ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "COMPONENT_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "COMPONENT_DESCRIPTION",
+                        "type": "VARCHAR",
+                        "length": "512",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "COMPONENT_REPOSITORY",
+                        "type": "VARCHAR",
+                        "length": "256",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "COMPONENT_CATEGORY",
+                        "type": "INTEGER",
+                        "length": "",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "COMPONENT_INDUSTRY",
+                        "type": "INTEGER",
+                        "length": "",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "LICENSE",
+                        "type": "INTEGER",
+                        "length": "",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "COMPONENT_DEVELOPER",
+                        "type": "INTEGER",
+                        "length": "",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

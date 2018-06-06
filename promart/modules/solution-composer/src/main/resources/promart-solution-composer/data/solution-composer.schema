@@ -1,0 +1,74 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "PROMART_SOLUTIONS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "SOLUTION_ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "SOLUTION_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "SOLUTION_DESCRIPTION",
+                        "type": "VARCHAR",
+                        "length": "512",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            },
+            {
+                "name": "PROMART_SOLUTION_COMPONENTNS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "SOLUTION_COMPONENT_ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "SOLUTION_COMPONENT_SOLUTION",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "SOLUTION_COMPONENT_COMPONENT",
+                        "type": "INTEGER",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

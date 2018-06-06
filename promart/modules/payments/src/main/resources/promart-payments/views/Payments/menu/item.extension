@@ -1,0 +1,5 @@
+{
+	'description': 'Payments menu',
+	'extensionPoint': 'shell-promart-payments-menu',
+	'module': 'promart-payments/views/Payments/menu/item.js'
+}

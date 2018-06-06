@@ -1,0 +1,8 @@
+{
+	"guid": "promart-accounts",
+	"repository": {
+		"type": "git",
+		"branch": "master",
+		"url": "https://github.com/promart-io/promart-accounts"
+	}
+}

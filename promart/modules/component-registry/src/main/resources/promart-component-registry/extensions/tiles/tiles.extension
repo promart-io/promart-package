@@ -1,0 +1,5 @@
+{
+	'description': ' tiles',
+	'extensionPoint': 'launchpad-promart-tiles',
+	'module': 'promart-component-registry/extensions/tiles/tiles.js'
+}

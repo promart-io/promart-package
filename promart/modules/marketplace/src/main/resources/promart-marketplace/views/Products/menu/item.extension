@@ -1,0 +1,5 @@
+{
+	'description': 'Products menu',
+	'extensionPoint': 'shell-promart-marketplace-menu',
+	'module': 'promart-marketplace/views/Products/menu/item.js'
+}

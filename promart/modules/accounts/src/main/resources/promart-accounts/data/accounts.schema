@@ -1,0 +1,117 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "PROMART_VENDORS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "VENDOR_ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "VENDOR_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "VENDOR_RATING",
+                        "type": "DOUBLE",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            },
+            {
+                "name": "PROMART_CUSTOMERS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "CUSTOMER_FIRST_NAME",
+                        "type": "VARCHAR",
+                        "length": "32",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "CUSTOMER_LAST_NAME",
+                        "type": "VARCHAR",
+                        "length": "32",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "CUSTOMER_EMAIL",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "CUSTOMER_ADDRESS",
+                        "type": "VARCHAR",
+                        "length": "128",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            },
+            {
+                "name": "PROMART_DEVELOPERS",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "DEVELOPER_ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "DEVELOPER_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            }
+        ]
+    }
+}
