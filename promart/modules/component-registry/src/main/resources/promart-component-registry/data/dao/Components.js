@@ -40,7 +40,7 @@ var dao = daoApi.create({
 			'required': true
 		},		{
 			'name':  'License',
-			'column': 'LICENSE',
+			'column': 'COMPONENT_LICENSE',
 			'type':'INTEGER',
 			'id': false,
 			'required': true

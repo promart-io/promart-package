@@ -14,6 +14,6 @@ exports.getPerspective = function() {
 		'image': 'address-book',
 
 		'link': '/services/v3/web/promart-accounts/index.html',
-		'order': 4,
+		'order': 5,
 	};
 };

@@ -1,6 +1,6 @@
 var daoApi = require('db/v3/dao');
 var dao = daoApi.create({
-	'table': 'ZEUS_SALES_MODELS',
+	'table': 'PROMART_SALES_MODELS',
 	'properties': [
 		{
 			'name':  'Id',

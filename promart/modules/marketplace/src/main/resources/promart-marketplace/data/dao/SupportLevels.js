@@ -1,6 +1,6 @@
 var daoApi = require('db/v3/dao');
 var dao = daoApi.create({
-	'table': 'ZEUS_SUPPORT_LEVELS',
+	'table': 'PROMART_SUPPORT_LEVELS',
 	'properties': [
 		{
 			'name':  'Id',

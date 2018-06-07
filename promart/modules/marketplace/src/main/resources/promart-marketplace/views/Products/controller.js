@@ -17,6 +17,9 @@ angular.module('page')
 		onEntityRefresh: function(callback) {
 			on('promart.promart-marketplace.Products.refresh', callback);
 		},
+		onPlansModified: function(callback) {
+			on('promart.promart-marketplace.Plans.modified', callback);
+		},
 		messageEntityModified: function() {
 			message('modified');
 		}
@@ -25,14 +28,12 @@ angular.module('page')
 .controller('PageController', function ($scope, $http, $messageHub) {
 
 	var api = '/services/v3/js/promart-marketplace/api/Products.js';
-	var planOptionsApi = '/services/v3/js/promart-solution-composer/api/Plans.js';
 	var categoryOptionsApi = '/services/v3/js/promart-data/api/Categories.js';
 	var industryOptionsApi = '/services/v3/js/promart-data/api/Industries.js';
 	var regionOptionsApi = '/services/v3/js/promart-data/api/Regions.js';
 	var countryOptionsApi = '/services/v3/js/promart-data/api/Countries.js';
 	var vendorOptionsApi = '/services/v3/js/promart-accounts/api/Vendors.js';
-
-	$scope.planOptions = [];
+	var planOptionsApi = '/services/v3/js/promart-marketplace/api/Plans.js';
 
 	$scope.categoryOptions = [];
 
@@ -44,13 +45,7 @@ angular.module('page')
 
 	$scope.vendorOptions = [];
 
-	function planOptionsLoad() {
-		$http.get(planOptionsApi)
-		.success(function(data) {
-			$scope.planOptions = data;
-		});
-	}
-	planOptionsLoad();
+	$scope.planOptions = [];
 
 	function categoryOptionsLoad() {
 		$http.get(categoryOptionsApi)
@@ -91,6 +86,14 @@ angular.module('page')
 		});
 	}
 	vendorOptionsLoad();
+
+	function planOptionsLoad() {
+		$http.get(planOptionsApi)
+		.success(function(data) {
+			$scope.planOptions = data;
+		});
+	}
+	planOptionsLoad();
 
 	function load() {
 		$http.get(api)
@@ -158,14 +161,6 @@ angular.module('page')
 		});
 	};
 
-	$scope.planOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.planOptions.length; i ++) {
-			if ($scope.planOptions[i].Id === optionKey) {
-				return $scope.planOptions[i].Name;
-			}
-		}
-		return null;
-	};
 	$scope.categoryOptionValue = function(optionKey) {
 		for (var i = 0 ; i < $scope.categoryOptions.length; i ++) {
 			if ($scope.categoryOptions[i].Id === optionKey) {
@@ -206,8 +201,17 @@ angular.module('page')
 		}
 		return null;
 	};
+	$scope.planOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.planOptions.length; i ++) {
+			if ($scope.planOptions[i].Id === optionKey) {
+				return $scope.planOptions[i].Name;
+			}
+		}
+		return null;
+	};
 
 	$messageHub.onEntityRefresh(load);
+	$messageHub.onPlansModified(planOptionsLoad);
 
 	function toggleEntityModal() {
 		$('#entityModal').modal('toggle');

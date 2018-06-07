@@ -34,15 +34,6 @@
                         "scale": ""
                     },
                     {
-                        "name": "PRODUCT_PLAN",
-                        "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
                         "name": "PRODUCT_PRICE",
                         "type": "DOUBLE",
                         "length": "20",
@@ -95,11 +86,20 @@
                         "identity": "false",
                         "precision": "",
                         "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_PLAN",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
                     }
                 ]
             },
             {
-                "name": "ZEUS_PLANS",
+                "name": "PROMART_PLANS",
                 "type": "TABLE",
                 "columns": 
                 [
@@ -124,7 +124,7 @@
                     {
                         "name": "PLAN_SUPPORT_LEVEL",
                         "type": "INTEGER",
-                        "length": "",
+                        "length": "20",
                         "primaryKey": "false",
                         "identity": "false",
                         "precision": "",
@@ -133,7 +133,7 @@
                     {
                         "name": "PLAN_SALES_MODEL",
                         "type": "INTEGER",
-                        "length": "",
+                        "length": "20",
                         "primaryKey": "false",
                         "identity": "false",
                         "precision": "",
@@ -142,14 +142,14 @@
                 ]
             },
             {
-                "name": "ZEUS_SUPPORT_LEVELS",
+                "name": "PROMART_SUPPORT_LEVELS",
                 "type": "TABLE",
                 "columns": 
                 [
                     {
                         "name": "SUPPORT_LEVEL_ID",
                         "type": "INTEGER",
-                        "length": "",
+                        "length": "20",
                         "primaryKey": "true",
                         "identity": "true",
                         "precision": "",
@@ -167,14 +167,14 @@
                 ]
             },
             {
-                "name": "ZEUS_SALES_MODELS",
+                "name": "PROMART_SALES_MODELS",
                 "type": "TABLE",
                 "columns": 
                 [
                     {
                         "name": "SALES_MODEL_ID",
                         "type": "INTEGER",
-                        "length": "",
+                        "length": "20",
                         "primaryKey": "true",
                         "identity": "true",
                         "precision": "",

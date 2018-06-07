@@ -1,5 +1,0 @@
-{
-	'description': 'Products view',
-	'extensionPoint': 'launchpad-promart-payments-view',
-	'module': 'promart-payments/views/Products/view.js'
-}

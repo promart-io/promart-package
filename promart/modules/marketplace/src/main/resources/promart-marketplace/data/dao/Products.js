@@ -21,12 +21,6 @@ var dao = daoApi.create({
 			'id': false,
 			'required': true
 		},		{
-			'name':  'Plan',
-			'column': 'PRODUCT_PLAN',
-			'type':'INTEGER',
-			'id': false,
-			'required': true
-		},		{
 			'name':  'Price',
 			'column': 'PRODUCT_PRICE',
 			'type':'DOUBLE',
@@ -59,6 +53,12 @@ var dao = daoApi.create({
 		},		{
 			'name':  'Vendor',
 			'column': 'PRODUCT_VENDOR',
+			'type':'INTEGER',
+			'id': false,
+			'required': true
+		},		{
+			'name':  'Plan',
+			'column': 'PRODUCT_PLAN',
 			'type':'INTEGER',
 			'id': false,
 			'required': true

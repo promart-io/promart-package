@@ -13,6 +13,6 @@ exports.getTile = function() {
 		'name': 'Accounts',
 		'icon': 'address-book',
 		'location': '/services/v3/web/promart-accounts/index.html',
-		'order': '4'
+		'order': '5'
 	};
 };

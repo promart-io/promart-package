@@ -21,17 +21,15 @@
 			<thead>
 				<tr>
 					<th>#</th>
-					<th class="text-capitalize">Id</th>
 					<th class="text-capitalize">Name</th>
-					<th class="text-capitalize">SupportLevel</th>
-					<th class="text-capitalize">SalesModel</th>
+					<th class="text-capitalize">Support Level</th>
+					<th class="text-capitalize">Sales Model</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="next in data">
 					<td>{{$index + 1}}</td>
-					<td>{{next.Id}}</td>
 					<td>{{next.Name}}</td>
 					<td>{{supportlevelOptionValue(next.SupportLevel)}}</td>
 					<td>{{salesmodelOptionValue(next.SalesModel)}}</td>
@@ -59,11 +57,11 @@
 							<input readonly type="text" class="form-control" placeholder="Enter name" ng-model="entity.Name">
 						</div>
 						<div class="form-group">
-							<label>SupportLevel</label>
+							<label>Support Level</label>
 							<select readonly class="form-control" ng-options="o.Id as o.Name for o in supportlevelOptions" ng-model="entity.SupportLevel"></select>
 						</div>
 						<div class="form-group">
-							<label>SalesModel</label>
+							<label>Sales Model</label>
 							<select readonly class="form-control" ng-options="o.Id as o.Name for o in salesmodelOptions" ng-model="entity.SalesModel"></select>
 						</div>
 					</form>

@@ -13,6 +13,6 @@ exports.getTile = function() {
 		'name': 'Payments',
 		'icon': 'dollar',
 		'location': '/services/v3/web/promart-payments/index.html',
-		'order': '6'
+		'order': '4'
 	};
 };

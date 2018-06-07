@@ -178,7 +178,7 @@
                     },
                     {
                         "name": "License",
-                        "dataName": "LICENSE",
+                        "dataName": "COMPONENT_LICENSE",
                         "dataType": "INTEGER",
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",

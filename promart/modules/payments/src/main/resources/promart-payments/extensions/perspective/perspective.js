@@ -10,10 +10,10 @@
 
 exports.getPerspective = function() {
 	return {
-		'name': 'Promart',
+		'name': 'ProMART',
 		'image': 'dollar',
 
 		'link': '/services/v3/web/promart-payments/index.html',
-		'order': 6,
+		'order': 4,
 	};
 };

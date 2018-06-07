@@ -61,7 +61,7 @@
                         "scale": ""
                     },
                     {
-                        "name": "LICENSE",
+                        "name": "COMPONENT_LICENSE",
                         "type": "INTEGER",
                         "length": "",
                         "primaryKey": "false",
