@@ -31,20 +31,12 @@ angular.module('page')
 .controller('PageController', function ($scope, $http, $messageHub) {
 
 	var api = '/services/v3/js/promart-payments/api/PurchaseOrders.js';
-	var statusOptionsApi = '/services/v3/js/promart-payments/api/PurchaseOrderStatuses.js';
 	var customerOptionsApi = '/services/v3/js/promart-accounts/api/Customers.js';
-
-	$scope.statusOptions = [];
+	var statusOptionsApi = '/services/v3/js/promart-payments/api/PurchaseOrderStatuses.js';
 
 	$scope.customerOptions = [];
 
-	function statusOptionsLoad() {
-		$http.get(statusOptionsApi)
-		.success(function(data) {
-			$scope.statusOptions = data;
-		});
-	}
-	statusOptionsLoad();
+	$scope.statusOptions = [];
 
 	function customerOptionsLoad() {
 		$http.get(customerOptionsApi)
@@ -53,6 +45,14 @@ angular.module('page')
 		});
 	}
 	customerOptionsLoad();
+
+	function statusOptionsLoad() {
+		$http.get(statusOptionsApi)
+		.success(function(data) {
+			$scope.statusOptions = data;
+		});
+	}
+	statusOptionsLoad();
 
 	function load() {
 		$http.get(api)
@@ -119,19 +119,19 @@ angular.module('page')
 			alert(JSON.stringify(data));
 		});
 	};
-	$scope.statusOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.statusOptions.length; i ++) {
-			if ($scope.statusOptions[i].Id === optionKey) {
-				return $scope.statusOptions[i].Name;
+	$scope.customerOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.customerOptions.length; i ++) {
+			if ($scope.customerOptions[i].Id === optionKey) {
+				return $scope.customerOptions[i].Email;
 			}
 		}
 		return null;
 	};
 
-	$scope.customerOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.customerOptions.length; i ++) {
-			if ($scope.customerOptions[i].Id === optionKey) {
-				return $scope.customerOptions[i].Email;
+	$scope.statusOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.statusOptions.length; i ++) {
+			if ($scope.statusOptions[i].Id === optionKey) {
+				return $scope.statusOptions[i].Name;
 			}
 		}
 		return null;

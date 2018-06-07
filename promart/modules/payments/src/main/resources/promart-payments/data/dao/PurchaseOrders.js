@@ -9,9 +9,9 @@ var dao = daoApi.create({
 			'id': true,
 			'required': true
 		},		{
-			'name':  'Status',
-			'column': 'PURCHASE_ORDER_STATUS',
-			'type':'INTEGER',
+			'name':  'Number',
+			'column': 'PURCHASE_ORDER_NUMBER',
+			'type':'VARCHAR',
 			'id': false,
 			'required': true
 		},		{
@@ -21,9 +21,9 @@ var dao = daoApi.create({
 			'id': false,
 			'required': true
 		},		{
-			'name':  'Number',
-			'column': 'PURCHASE_ORDER_NUMBER',
-			'type':'VARCHAR',
+			'name':  'Status',
+			'column': 'PURCHASE_ORDER_STATUS',
+			'type':'INTEGER',
 			'id': false,
 			'required': true
 		}]

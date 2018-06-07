@@ -122,7 +122,7 @@ angular.module('page')
 	$scope.unitOptionValue = function(optionKey) {
 		for (var i = 0 ; i < $scope.unitOptions.length; i ++) {
 			if ($scope.unitOptions[i].Id === optionKey) {
-				return $scope.unitOptions[i].Name2;
+				return $scope.unitOptions[i].Name;
 			}
 		}
 		return null;

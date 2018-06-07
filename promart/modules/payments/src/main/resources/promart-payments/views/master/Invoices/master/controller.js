@@ -111,7 +111,7 @@ angular.module('page')
 	$scope.purchaseorderOptionValue = function(optionKey) {
 		for (var i = 0 ; i < $scope.purchaseorderOptions.length; i ++) {
 			if ($scope.purchaseorderOptions[i].Id === optionKey) {
-				return $scope.purchaseorderOptions[i].Name;
+				return $scope.purchaseorderOptions[i].Number;
 			}
 		}
 		return null;

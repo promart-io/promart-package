@@ -22,18 +22,18 @@
 			<thead>
 				<tr>
 					<th>#</th>
-					<th class="text-capitalize">Status</th>
-					<th class="text-capitalize">Customer</th>
 					<th class="text-capitalize">Number</th>
+					<th class="text-capitalize">Customer</th>
+					<th class="text-capitalize">Status</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="next in data" ng-class="{'bg-info':next && next.Id == selectedEntity.Id}" style="cursor: pointer;" ng-click="selectEntity(next)">
 					<td>{{$index + 1}}</td>
-					<td>{{statusOptionValue(next.Status)}}</td>
-					<td>{{customerOptionValue(next.Customer)}}</td>
 					<td>{{next.Number}}</td>
+					<td>{{customerOptionValue(next.Customer)}}</td>
+					<td>{{statusOptionValue(next.Status)}}</td>
 					<td>
 						<i class="close fa fa-2x fa-remove" ng-click="openDeleteDialog(next)"></i>
 						<i class="close fa fa-2x fa-pencil" ng-click="openEditDialog(next)" style="margin-right: 0.5em"></i>
@@ -57,16 +57,16 @@
 				<div class="modal-body">
 					<form ng-hide="actionType === 'delete'">
 						<div class="form-group">
-							<label>Status</label>
-							<select class="form-control" ng-options="o.Id as o.Name for o in statusOptions" ng-model="entity.Status"></select>
+							<label>Number</label>
+							<input type="text" class="form-control" placeholder="Enter number" ng-model="entity.Number">
 						</div>
 						<div class="form-group">
 							<label>Customer</label>
 							<select class="form-control" ng-options="o.Id as o.Email for o in customerOptions" ng-model="entity.Customer"></select>
 						</div>
 						<div class="form-group">
-							<label>Number</label>
-							<input type="text" class="form-control" placeholder="Enter number" ng-model="entity.Number">
+							<label>Status</label>
+							<select class="form-control" ng-options="o.Id as o.Name for o in statusOptions" ng-model="entity.Status"></select>
 						</div>
 					</form>
 					<div ng-show="actionType === 'delete'">

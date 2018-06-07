@@ -16,9 +16,9 @@
                         "scale": ""
                     },
                     {
-                        "name": "PURCHASE_ORDER_STATUS",
-                        "type": "INTEGER",
-                        "length": "0",
+                        "name": "PURCHASE_ORDER_NUMBER",
+                        "type": "VARCHAR",
+                        "length": "20",
                         "primaryKey": "false",
                         "identity": "false",
                         "precision": "",
@@ -27,16 +27,16 @@
                     {
                         "name": "PURCHASE_ORDER_CUSTOMER",
                         "type": "INTEGER",
-                        "length": "20",
+                        "length": "",
                         "primaryKey": "false",
                         "identity": "false",
                         "precision": "",
                         "scale": ""
                     },
                     {
-                        "name": "PURCHASE_ORDER_NUMBER",
-                        "type": "VARCHAR",
-                        "length": "20",
+                        "name": "PURCHASE_ORDER_STATUS",
+                        "type": "INTEGER",
+                        "length": "0",
                         "primaryKey": "false",
                         "identity": "false",
                         "precision": "",
