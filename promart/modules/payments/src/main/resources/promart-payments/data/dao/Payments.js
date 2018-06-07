@@ -9,15 +9,15 @@ var dao = daoApi.create({
 			'id': true,
 			'required': true
 		},		{
-			'name':  'Amount',
-			'column': 'PAYMENT_AMOUNT',
-			'type':'DOUBLE',
-			'id': false,
-			'required': true
-		},		{
 			'name':  'Invoice',
 			'column': 'PAYMENT_INVOICE',
 			'type':'INTEGER',
+			'id': false,
+			'required': true
+		},		{
+			'name':  'Amount',
+			'column': 'PAYMENT_AMOUNT',
+			'type':'DOUBLE',
 			'id': false,
 			'required': true
 		}]

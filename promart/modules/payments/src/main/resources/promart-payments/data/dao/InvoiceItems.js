@@ -15,26 +15,26 @@ var dao = daoApi.create({
 			'id': false,
 			'required': true
 		},		{
-			'name':  'Quantity',
-			'column': 'QUANTITY',
-			'type':'VARCHAR',
-			'id': false,
-			'required': true
-		},		{
-			'name':  'Price',
-			'column': 'PRICE',
-			'type':'VARCHAR',
-			'id': false,
-			'required': true
-		},		{
-			'name':  'Unit',
-			'column': 'INVOICE_UNIT',
+			'name':  'Product',
+			'column': 'INVOICE_ITEM_PRODUCT',
 			'type':'INTEGER',
 			'id': false,
 			'required': true
 		},		{
-			'name':  'Product',
-			'column': 'INVOICE_ITEM_PRODUCT',
+			'name':  'Quantity',
+			'column': 'INVOICE_ITEM_QUANTITY',
+			'type':'INTEGER',
+			'id': false,
+			'required': true
+		},		{
+			'name':  'Price',
+			'column': 'INVOICE_ITEM_PRICE',
+			'type':'DOUBLE',
+			'id': false,
+			'required': true
+		},		{
+			'name':  'Unit',
+			'column': 'INVOICE_ITEM_UNIT',
 			'type':'INTEGER',
 			'id': false,
 			'required': true

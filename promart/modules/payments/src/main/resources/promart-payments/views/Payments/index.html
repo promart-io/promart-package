@@ -22,16 +22,16 @@
 			<thead>
 				<tr>
 					<th>#</th>
-					<th class="text-capitalize">Amount</th>
 					<th class="text-capitalize">Invoice</th>
+					<th class="text-capitalize">Amount</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="next in data">
 					<td>{{$index + 1}}</td>
-					<td>{{next.Amount}}</td>
 					<td>{{invoiceOptionValue(next.Invoice)}}</td>
+					<td>{{next.Amount}}</td>
 					<td>
 						<i class="close fa fa-2x fa-remove" ng-click="openDeleteDialog(next)"></i>
 						<i class="close fa fa-2x fa-pencil" ng-click="openEditDialog(next)" style="margin-right: 0.5em"></i>
@@ -55,12 +55,12 @@
 				<div class="modal-body">
 					<form ng-hide="actionType === 'delete'">
 						<div class="form-group">
-							<label>Amount</label>
-							<input type="text" class="form-control" placeholder="Enter amount" ng-model="entity.Amount">
-						</div>
-						<div class="form-group">
 							<label>Invoice</label>
 							<select class="form-control" ng-options="o.Id as o.Number for o in invoiceOptions" ng-model="entity.Invoice"></select>
+						</div>
+						<div class="form-group">
+							<label>Amount</label>
+							<input type="number" class="form-control" placeholder="Enter amount" ng-model="entity.Amount">
 						</div>
 					</form>
 					<div ng-show="actionType === 'delete'">

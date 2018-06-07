@@ -22,20 +22,20 @@
 			<thead>
 				<tr>
 					<th>#</th>
+					<th class="text-capitalize">Product</th>
 					<th class="text-capitalize">Quantity</th>
 					<th class="text-capitalize">Price</th>
 					<th class="text-capitalize">Unit</th>
-					<th class="text-capitalize">Product</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="next in data">
 					<td>{{$index + 1}}</td>
+					<td>{{productOptionValue(next.Product)}}</td>
 					<td>{{next.Quantity}}</td>
 					<td>{{next.Price}}</td>
 					<td>{{unitOptionValue(next.Unit)}}</td>
-					<td>{{productOptionValue(next.Product)}}</td>
 					<td>
 						<i class="close fa fa-2x fa-remove" ng-click="openDeleteDialog(next)"></i>
 						<i class="close fa fa-2x fa-pencil" ng-click="openEditDialog(next)" style="margin-right: 0.5em"></i>
@@ -59,20 +59,20 @@
 				<div class="modal-body">
 					<form ng-hide="actionType === 'delete'">
 						<div class="form-group">
+							<label>Product</label>
+							<select class="form-control" ng-options="o.Id as o.Name for o in productOptions" ng-model="entity.Product"></select>
+						</div>
+						<div class="form-group">
 							<label>Quantity</label>
-							<input type="text" class="form-control" placeholder="Enter quantity" ng-model="entity.Quantity">
+							<input type="number" class="form-control" placeholder="Enter quantity" ng-model="entity.Quantity">
 						</div>
 						<div class="form-group">
 							<label>Price</label>
-							<input type="text" class="form-control" placeholder="Enter price" ng-model="entity.Price">
+							<input type="number" class="form-control" placeholder="Enter price" ng-model="entity.Price">
 						</div>
 						<div class="form-group">
 							<label>Unit</label>
 							<select class="form-control" ng-options="o.Id as o.Name for o in unitOptions" ng-model="entity.Unit"></select>
-						</div>
-						<div class="form-group">
-							<label>Product</label>
-							<select class="form-control" ng-options="o.Id as o.Name for o in productOptions" ng-model="entity.Product"></select>
 						</div>
 					</form>
 					<div ng-show="actionType === 'delete'">

@@ -28,20 +28,12 @@ angular.module('page')
 .controller('PageController', function ($scope, $http, $messageHub) {
 
 	var api = '/services/v3/js/promart-payments/api/InvoiceItems.js';
-	var unitOptionsApi = '/services/v3/js/promart-data/api/UoM.js';
 	var productOptionsApi = '/services/v3/js/promart-marketplace/api/Products.js';
-
-	$scope.unitOptions = [];
+	var unitOptionsApi = '/services/v3/js/promart-data/api/UoM.js';
 
 	$scope.productOptions = [];
 
-	function unitOptionsLoad() {
-		$http.get(unitOptionsApi)
-		.success(function(data) {
-			$scope.unitOptions = data;
-		});
-	}
-	unitOptionsLoad();
+	$scope.unitOptions = [];
 
 	function productOptionsLoad() {
 		$http.get(productOptionsApi)
@@ -50,6 +42,14 @@ angular.module('page')
 		});
 	}
 	productOptionsLoad();
+
+	function unitOptionsLoad() {
+		$http.get(unitOptionsApi)
+		.success(function(data) {
+			$scope.unitOptions = data;
+		});
+	}
+	unitOptionsLoad();
 
 	function load() {
 		$http.get(api + '?Invoice=' + $scope.masterEntityId)
@@ -119,18 +119,18 @@ angular.module('page')
 		});
 	};
 
-	$scope.unitOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.unitOptions.length; i ++) {
-			if ($scope.unitOptions[i].Id === optionKey) {
-				return $scope.unitOptions[i].Name;
-			}
-		}
-		return null;
-	};
 	$scope.productOptionValue = function(optionKey) {
 		for (var i = 0 ; i < $scope.productOptions.length; i ++) {
 			if ($scope.productOptions[i].Id === optionKey) {
 				return $scope.productOptions[i].Name;
+			}
+		}
+		return null;
+	};
+	$scope.unitOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.unitOptions.length; i ++) {
+			if ($scope.unitOptions[i].Id === optionKey) {
+				return $scope.unitOptions[i].Name;
 			}
 		}
 		return null;
