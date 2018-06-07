@@ -10,11 +10,12 @@
 
 exports.getView = function() {
 	return {
-		'id': 'Plans',
-		'name': 'Plans',
-		'label': 'Plans',
+		'id': 'Products',
+		'name': 'Products',
+		'label': 'Products',
 		'factory': 'frame',
-		// 'region': 'center-bottom',
-		'link': '/services/v3/web/promart-marketplace/views/Plans/index.html'
+		'region': 'center-top',
+		'type': 'master',
+		'link': '/services/v3/web/promart-marketplace/views/master/Products/master/index.html'
 	};
 };

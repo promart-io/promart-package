@@ -4,16 +4,28 @@ var dao = daoApi.create({
 	'properties': [
 		{
 			'name':  'Id',
-			'column': 'ID',
+			'column': 'PLAN_ID',
 			'type':'INTEGER',
 			'id': true,
 			'required': true
 		},		{
-			'name':  'Name',
-			'column': 'PLAN_NAME',
-			'type':'VARCHAR',
+			'name':  'Product',
+			'column': 'PLAN_PRODUCT',
+			'type':'INTEGER',
 			'id': false,
-			'required': false
+			'required': true
+		},		{
+			'name':  'Type',
+			'column': 'PLAN_TYPE',
+			'type':'INTEGER',
+			'id': false,
+			'required': true
+		},		{
+			'name':  'Price',
+			'column': 'PLAN_PRICE',
+			'type':'DOUBLE',
+			'id': false,
+			'required': true
 		},		{
 			'name':  'SupportLevel',
 			'column': 'PLAN_SUPPORT_LEVEL',
@@ -23,6 +35,12 @@ var dao = daoApi.create({
 		},		{
 			'name':  'SalesModel',
 			'column': 'PLAN_SALES_MODEL',
+			'type':'INTEGER',
+			'id': false,
+			'required': true
+		},		{
+			'name':  'Unit',
+			'column': 'PRODUCT_UNIT',
 			'type':'INTEGER',
 			'id': false,
 			'required': true

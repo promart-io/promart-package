@@ -56,12 +56,6 @@ var dao = daoApi.create({
 			'type':'INTEGER',
 			'id': false,
 			'required': true
-		},		{
-			'name':  'Plan',
-			'column': 'PRODUCT_PLAN',
-			'type':'INTEGER',
-			'id': false,
-			'required': true
 		}]
 });
 

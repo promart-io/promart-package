@@ -86,15 +86,6 @@
                         "identity": "false",
                         "precision": "",
                         "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_PLAN",
-                        "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
                     }
                 ]
             },
@@ -104,7 +95,7 @@
                 "columns": 
                 [
                     {
-                        "name": "ID",
+                        "name": "PLAN_ID",
                         "type": "INTEGER",
                         "length": "0",
                         "primaryKey": "true",
@@ -113,9 +104,27 @@
                         "scale": ""
                     },
                     {
-                        "name": "PLAN_NAME",
-                        "type": "VARCHAR",
-                        "length": "64",
+                        "name": "PLAN_PRODUCT",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PLAN_TYPE",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PLAN_PRICE",
+                        "type": "DOUBLE",
+                        "length": "20",
                         "primaryKey": "false",
                         "identity": "false",
                         "precision": "",
@@ -132,6 +141,15 @@
                     },
                     {
                         "name": "PLAN_SALES_MODEL",
+                        "type": "INTEGER",
+                        "length": "20",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PRODUCT_UNIT",
                         "type": "INTEGER",
                         "length": "20",
                         "primaryKey": "false",
@@ -182,6 +200,31 @@
                     },
                     {
                         "name": "SALES_MODEL_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "primaryKey": "false",
+                        "identity": "false",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            },
+            {
+                "name": "PROMART_PLAN_TYPES",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "PLAN_TYPE_ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "precision": "",
+                        "scale": ""
+                    },
+                    {
+                        "name": "PLAN_TYPE_NAME",
                         "type": "VARCHAR",
                         "length": "64",
                         "primaryKey": "false",

@@ -8,11 +8,13 @@
  * SAP - initial API and implementation
  */
 
-exports.getMenu = function() {
+exports.getView = function() {
 	return {
 		'id': 'Plans',
 		'name': 'Plans',
-		'link': '#',
-		'order': 800
+		'label': 'Plans',
+		'factory': 'frame',
+		'region': 'center-bottom',
+		'link': '/services/v3/web/promart-marketplace/views/master/details/Plans/index.html'
 	};
 };

@@ -1,5 +1,0 @@
-{
-	'description': 'Plans menu',
-	'extensionPoint': 'shell-promart-marketplace-menu',
-	'module': 'promart-marketplace/views/Plans/menu/item.js'
-}
