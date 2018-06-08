@@ -10,7 +10,7 @@
 
 exports.getPerspective = function() {
 	return {
-		'name': 'ProMART',
+		'name': 'Marketplace',
 		'image': 'shopping-cart',
 
 		'link': '/services/v3/web/promart-marketplace/index.html',

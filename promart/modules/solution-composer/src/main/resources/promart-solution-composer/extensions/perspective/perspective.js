@@ -10,7 +10,7 @@
 
 exports.getPerspective = function() {
 	return {
-		'name': 'ProMART',
+		'name': 'Solution Composer',
 		'image': 'puzzle-piece',
 
 		'link': '/services/v3/web/promart-solution-composer/index.html',

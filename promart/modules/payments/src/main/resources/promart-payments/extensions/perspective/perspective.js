@@ -10,7 +10,7 @@
 
 exports.getPerspective = function() {
 	return {
-		'name': 'ProMART',
+		'name': 'Finances',
 		'image': 'dollar',
 
 		'link': '/services/v3/web/promart-payments/index.html',

@@ -10,7 +10,7 @@
 
 exports.getPerspective = function() {
 	return {
-		'name': 'ProMART',
+		'name': 'Component Registry',
 		'image': 'cogs',
 
 		'link': '/services/v3/web/promart-component-registry/index.html',

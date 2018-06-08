@@ -10,7 +10,7 @@
 
 exports.getTile = function() {
 	return {
-		'name': 'Payments',
+		'name': 'Finances',
 		'icon': 'dollar',
 		'location': '/services/v3/web/promart-payments/index.html',
 		'order': '4'
