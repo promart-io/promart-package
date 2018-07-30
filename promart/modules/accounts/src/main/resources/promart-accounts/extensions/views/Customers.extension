@@ -1,5 +1,0 @@
-{
-	'description': 'Customers view',
-	'extensionPoint': 'launchpad-promart-accounts-view',
-	'module': 'promart-accounts/views/Customers/view.js'
-}

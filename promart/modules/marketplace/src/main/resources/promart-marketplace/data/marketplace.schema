@@ -4,236 +4,145 @@
             {
                 "name": "PROMART_PRODUCTS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "PRODUCT_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_NAME",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PRODUCT_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "32",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_DESCRIPTION",
+                        "length": 32,
+                        "nullable": true,
+                        "name": "PRODUCT_NAME"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "512",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_PRICE",
+                        "length": 512,
+                        "nullable": true,
+                        "name": "PRODUCT_DESCRIPTION"
+                    }, {
                         "type": "DOUBLE",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_CATEGORY",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PRODUCT_PRICE"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_INDUSTRY",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PRODUCT_CATEGORY"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_REGION",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PRODUCT_INDUSTRY"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_COUNTRY",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PRODUCT_REGION"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_VENDOR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PRODUCT_COUNTRY"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PRODUCT_VENDOR"
+                    }]
+            }, {
                 "name": "PROMART_PLANS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "PLAN_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PLAN_PRODUCT",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PLAN_ID"
+                    }, {
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PLAN_TYPE",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PLAN_PRODUCT"
+                    }, {
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PLAN_PRICE",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PLAN_TYPE"
+                    }, {
                         "type": "DOUBLE",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PLAN_SUPPORT_LEVEL",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PLAN_PRICE"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PLAN_SALES_MODEL",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PLAN_SUPPORT_LEVEL"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PRODUCT_UNIT",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PLAN_SALES_MODEL"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PRODUCT_UNIT"
+                    }]
+            }, {
                 "name": "PROMART_SUPPORT_LEVELS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "SUPPORT_LEVEL_ID",
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "SUPPORT_LEVEL_NAME",
+                        "length": 20,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "SUPPORT_LEVEL_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "64",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 64,
+                        "name": "SUPPORT_LEVEL_NAME"
+                    }]
+            }, {
                 "name": "PROMART_SALES_MODELS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "SALES_MODEL_ID",
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "SALES_MODEL_NAME",
+                        "length": 20,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "SALES_MODEL_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "64",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 64,
+                        "name": "SALES_MODEL_NAME"
+                    }]
+            }, {
                 "name": "PROMART_PLAN_TYPES",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "PLAN_TYPE_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PLAN_TYPE_NAME",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PLAN_TYPE_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "64",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            }
-        ]
+                        "length": 64,
+                        "name": "PLAN_TYPE_NAME"
+                    }]
+            }]
     }
 }

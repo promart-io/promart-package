@@ -1,5 +1,0 @@
-{
-	'description': 'Developers menu',
-	'extensionPoint': 'shell-promart-accounts-menu',
-	'module': 'promart-accounts/views/Developers/menu/item.js'
-}

@@ -1,4 +1,0 @@
-{
-	'description': 'Extension Point for the promart-component-registry View Providers',
-	'name': 'launchpad-promart-component-registry-view'
-}

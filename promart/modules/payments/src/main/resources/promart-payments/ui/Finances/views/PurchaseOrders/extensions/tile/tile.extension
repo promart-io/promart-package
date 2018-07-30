@@ -1,0 +1,5 @@
+{
+	"description": "Finances tiles",
+	"extensionPoint": "launchpad-promart-tiles",
+	"module": "promart-payments/ui/Finances/views/PurchaseOrders/extensions/tile/tile.js"
+}

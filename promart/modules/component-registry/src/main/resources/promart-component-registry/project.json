@@ -1,1 +1,8 @@
-{"guid":"promart-component-registry","repository":{"type":"git","branch":"master","url":"https://github.com/promart-io/promart-component-registry.git"}}
+{
+    "guid": "promart-component-registry",
+    "repository": {
+        "type": "git",
+        "branch": "master",
+        "url": "https://github.com/promart-io/promart-component-registry.git"
+    }
+}

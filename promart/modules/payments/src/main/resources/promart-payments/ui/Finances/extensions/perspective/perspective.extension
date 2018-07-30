@@ -1,0 +1,5 @@
+{
+	"description": "Finances perspective",
+	"extensionPoint": "launchpad-promart-perspective",
+	"module": "promart-payments/ui/Finances/extensions/perspective/perspective.js"
+}

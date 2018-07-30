@@ -1,5 +1,0 @@
-{
-	'description': 'Solutions view',
-	'extensionPoint': 'launchpad-promart-solution-composer-view',
-	'module': 'promart-solution-composer/views/master/Solutions/view.js'
-}

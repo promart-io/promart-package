@@ -1,4 +1,0 @@
-{
-	'description': 'Extension Point for the promart-payments - PurchaseOrders Master View Providers',
-	'name': 'launchpad-promart-payments-PurchaseOrders-view'
-}

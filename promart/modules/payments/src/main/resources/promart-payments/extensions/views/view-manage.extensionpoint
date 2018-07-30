@@ -1,4 +1,0 @@
-{
-	'description': 'Extension Point for the promart-payments View Providers',
-	'name': 'launchpad-promart-payments-view'
-}

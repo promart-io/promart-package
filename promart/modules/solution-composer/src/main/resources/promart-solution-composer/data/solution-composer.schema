@@ -4,71 +4,47 @@
             {
                 "name": "PROMART_SOLUTIONS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "SOLUTION_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "SOLUTION_NAME",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "SOLUTION_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "64",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "SOLUTION_DESCRIPTION",
+                        "length": 64,
+                        "nullable": true,
+                        "name": "SOLUTION_NAME"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "512",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 512,
+                        "nullable": true,
+                        "name": "SOLUTION_DESCRIPTION"
+                    }]
+            }, {
                 "name": "PROMART_SOLUTION_COMPONENTNS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "SOLUTION_COMPONENT_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "SOLUTION_COMPONENT_SOLUTION",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "SOLUTION_COMPONENT_ID"
+                    }, {
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "SOLUTION_COMPONENT_COMPONENT",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "SOLUTION_COMPONENT_SOLUTION"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            }
-        ]
+                        "length": 20,
+                        "nullable": true,
+                        "name": "SOLUTION_COMPONENT_COMPONENT"
+                    }]
+            }]
     }
 }

@@ -1,0 +1,5 @@
+{
+	"description": "Vendors view",
+	"extensionPoint": "launchpad-promart-Accounts-view",
+	"module": "promart-accounts/ui/Accounts/views/Vendors/extensions/view.js"
+}

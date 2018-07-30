@@ -4,270 +4,170 @@
             {
                 "name": "PROMART_PURCHASE_ORDERS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "PURCHASE_ORDER_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASE_ORDER_NUMBER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASE_ORDER_CUSTOMER",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_NUMBER"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASE_ORDER_STATUS",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_CUSTOMER"
+                    }, {
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_STATUS"
+                    }]
+            }, {
                 "name": "PROMART_PURCHASE_ORDER_STATUSES",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "PURCHASE_ORDER_STATUS_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASE_ORDER_STATUS_NAME",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_STATUS_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_STATUS_NAME"
+                    }]
+            }, {
                 "name": "PROMART_PAYMENTS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "PAYMENT_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PAYMENT_INVOICE",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PAYMENT_ID"
+                    }, {
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PAYMENT_AMOUNT",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PAYMENT_INVOICE"
+                    }, {
                         "type": "DOUBLE",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PAYMENT_AMOUNT"
+                    }]
+            }, {
                 "name": "PROMART_INVOICES",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "INVOICE_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "INVOICE_NUMBER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "INVOICE_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "INVOICE_DATE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICE_NUMBER"
+                    }, {
                         "type": "DATE",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "INVOICE_PURCHASE_ORDER",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICE_DATE"
+                    }, {
                         "type": "INTEGER",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICE_PURCHASE_ORDER"
+                    }]
+            }, {
                 "name": "PROMART_INVOICE_ITEMS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "INVOICE_ITEM_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "INVOICE_ITEM_INVOICE",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "INVOICE_ITEM_ID"
+                    }, {
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "INVOICE_ITEM_PRODUCT",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "INVOICE_ITEM_INVOICE"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "INVOICE_ITEM_QUANTITY",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICE_ITEM_PRODUCT"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "INVOICE_ITEM_PRICE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICE_ITEM_QUANTITY"
+                    }, {
                         "type": "DOUBLE",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "INVOICE_ITEM_UNIT",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICE_ITEM_PRICE"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICE_ITEM_UNIT"
+                    }]
+            }, {
                 "name": "PURCHASEORDERITEMS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASEORDER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "ID"
+                    }, {
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASE_ORDER_ITEM_PRODUCT",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PURCHASEORDER"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASE_ORDER_ITEM_QUANTITY",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_ITEM_PRODUCT"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASE_ORDER_ITEM_PRICE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_ITEM_QUANTITY"
+                    }, {
                         "type": "DOUBLE",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "PURCHASE_ORDER_ITEM_UNIT",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_ITEM_PRICE"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            }
-        ]
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PURCHASE_ORDER_ITEM_UNIT"
+                    }]
+            }]
     }
 }

@@ -4,114 +4,73 @@
             {
                 "name": "PROMART_VENDORS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "VENDOR_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "VENDOR_NAME",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "VENDOR_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "64",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "VENDOR_RATING",
+                        "length": 64,
+                        "name": "VENDOR_NAME"
+                    }, {
                         "type": "DOUBLE",
-                        "length": "20",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 20,
+                        "nullable": true,
+                        "name": "VENDOR_RATING"
+                    }]
+            }, {
                 "name": "PROMART_CUSTOMERS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "CUSTOMER_FIRST_NAME",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "32",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "CUSTOMER_LAST_NAME",
+                        "length": 32,
+                        "nullable": true,
+                        "name": "CUSTOMER_FIRST_NAME"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "32",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "CUSTOMER_EMAIL",
+                        "length": 32,
+                        "nullable": true,
+                        "name": "CUSTOMER_LAST_NAME"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "64",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "CUSTOMER_ADDRESS",
+                        "length": 64,
+                        "nullable": true,
+                        "name": "CUSTOMER_EMAIL"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "128",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            },
-            {
+                        "length": 128,
+                        "nullable": true,
+                        "name": "CUSTOMER_ADDRESS"
+                    }]
+            }, {
                 "name": "PROMART_DEVELOPERS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "DEVELOPER_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "DEVELOPER_NAME",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "DEVELOPER_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "64",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            }
-        ]
+                        "length": 64,
+                        "nullable": true,
+                        "name": "DEVELOPER_NAME"
+                    }]
+            }]
     }
 }

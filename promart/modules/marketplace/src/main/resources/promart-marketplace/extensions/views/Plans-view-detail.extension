@@ -1,5 +1,0 @@
-{
-	'description': 'Plans view',
-	'extensionPoint': 'launchpad-promart-marketplace-Products-view',
-	'module': 'promart-marketplace/views/master/details/Plans/view.js'
-}

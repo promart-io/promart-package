@@ -4,82 +4,50 @@
             {
                 "name": "PROMART_COMPONENTS",
                 "type": "TABLE",
-                "columns": 
-                [
+                "columns": [
                     {
-                        "name": "COMPONENT_ID",
                         "type": "INTEGER",
-                        "length": "0",
-                        "primaryKey": "true",
-                        "identity": "true",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "COMPONENT_NAME",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "COMPONENT_ID"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "64",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "COMPONENT_DESCRIPTION",
+                        "length": 64,
+                        "nullable": true,
+                        "name": "COMPONENT_NAME"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "512",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "COMPONENT_REPOSITORY",
+                        "length": 512,
+                        "nullable": true,
+                        "name": "COMPONENT_DESCRIPTION"
+                    }, {
                         "type": "VARCHAR",
-                        "length": "256",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "COMPONENT_CATEGORY",
+                        "length": 256,
+                        "nullable": true,
+                        "name": "COMPONENT_REPOSITORY"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "COMPONENT_INDUSTRY",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "COMPONENT_CATEGORY"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "COMPONENT_LICENSE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "COMPONENT_INDUSTRY"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    },
-                    {
-                        "name": "COMPONENT_DEVELOPER",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "COMPONENT_LICENSE"
+                    }, {
                         "type": "INTEGER",
-                        "length": "",
-                        "primaryKey": "false",
-                        "identity": "false",
-                        "precision": "",
-                        "scale": ""
-                    }
-                ]
-            }
-        ]
+                        "length": 20,
+                        "nullable": true,
+                        "name": "COMPONENT_DEVELOPER"
+                    }]
+            }]
     }
 }

@@ -1,5 +1,0 @@
-{
-	'description': 'PurchaseOrders view',
-	'extensionPoint': 'launchpad-promart-payments-view',
-	'module': 'promart-payments/views/master/PurchaseOrders/view.js'
-}
