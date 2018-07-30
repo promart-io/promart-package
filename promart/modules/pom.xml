@@ -22,13 +22,8 @@
 	</scm>
 
 	<modules>
-		<module>accounts</module>
-		<module>component-registry</module>
+		<module>promart</module>
 		<module>data</module>
-		<module>marketplace</module>
-		<module>payments</module>
-		<module>launchpad</module>
-		<module>solution-composer</module>
 	</modules>
 
 	<properties>

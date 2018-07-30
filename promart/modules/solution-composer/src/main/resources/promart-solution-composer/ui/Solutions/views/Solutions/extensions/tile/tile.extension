@@ -1,5 +1,0 @@
-{
-	"description": "Solutions tiles",
-	"extensionPoint": "launchpad-promart-tiles",
-	"module": "promart-solution-composer/ui/Solutions/views/Solutions/extensions/tile/tile.js"
-}

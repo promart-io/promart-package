@@ -1,5 +1,0 @@
-{
-	"description": "Components tiles",
-	"extensionPoint": "launchpad-promart-tiles",
-	"module": "promart-component-registry/ui/Components/views/Components/extensions/tile/tile.js"
-}

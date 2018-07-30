@@ -1,5 +1,0 @@
-{
-	"description": "Marketplace tiles",
-	"extensionPoint": "launchpad-promart-tiles",
-	"module": "promart-marketplace/ui/Marketplace/views/Products/extensions/tile/tile.js"
-}

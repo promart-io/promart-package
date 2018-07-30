@@ -1,5 +1,0 @@
-{
-	"description": "Marketplace view",
-	"extensionPoint": "launchpad-promart-Marketplace-Products-view",
-	"module": "promart-marketplace/ui/Marketplace/views/master/Products/master/extensions/view.js"
-}

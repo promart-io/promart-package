@@ -1,5 +1,0 @@
-{
-	"description": "Finances view",
-	"extensionPoint": "launchpad-promart-Finances-view",
-	"module": "promart-payments/ui/Finances/views/master/PurchaseOrders/extensions/view.js"
-}

@@ -1,5 +1,0 @@
-{
-	"description": "Marketplace perspective",
-	"extensionPoint": "launchpad-promart-perspective",
-	"module": "promart-marketplace/ui/Marketplace/extensions/perspective/perspective.js"
-}
