@@ -25,13 +25,13 @@
 		</license>
 	</licenses>
 
-	<url>http://www.dirigible.io</url>
+	<url>http://www.promart.io</url>
 	<organization>
-		<name>Eclipse Foundation</name>
-		<url>http://www.eclipse.org</url>
+		<name>ProMART</name>
+		<url>http://www.promart.io</url>
 	</organization>
 	<scm>
-		<url>https://github.com/eclipse/dirigible</url>
+		<url>https://github.com/promart-io/promart</url>
 	</scm>
 
 	<modules>

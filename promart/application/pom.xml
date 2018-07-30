@@ -20,6 +20,16 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<inherited>true</inherited>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<failOnMissingWebXml>true</failOnMissingWebXml>
@@ -51,31 +61,129 @@
 		    <version>${logback.version}</version>
 		    <scope>compile</scope>
 		</dependency>
-
-		<!-- Dirigible -->
+	
+		<!-- Commons -->
 		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-group-runtime-javascript</artifactId>
-			<version>${dirigible.version}</version>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-commons-config</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+	
+		<!-- API -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-api</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- Repository -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-repository</artifactId>
+		 	<version>3.2.3</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-ide</artifactId>
-			<version>${dirigible.version}</version>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-repository-local</artifactId>
+		 	<version>3.2.3</version>
 		</dependency>
 
-		<!-- External - JSR API -->
+		<!-- Database -->
 		<dependency>
-			<groupId>javax.annotation</groupId>
-			<artifactId>jsr250-api</artifactId>
-			<version>1.0</version>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-database</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-database-h2</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-database-custom</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- Core Services -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-core</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- Services -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-services</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-engine</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- CMS -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-cms-api</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-cms-internal</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+		
+		<!-- BPM -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-bpm</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- IDE Plugins -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-ide</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- Templates Plugins -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-templates</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- Resources Plugins -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-resources</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- External API modules -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-ext-qunit</artifactId>
+		 	<version>3.2.3</version>
+		</dependency>
+
+		<!-- External -->
+		<dependency>
+		  <groupId>javax.annotation</groupId>
+		  <artifactId>jsr250-api</artifactId>
+		  <version>${jsr250-api.version}</version>
 		</dependency>
 
 		<!-- External - Jetty -->
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-servlets</artifactId>
-			<version>9.4.5.v20170502</version>
+			<version>${jetty.version}</version>
 		</dependency>
 
 		<!-- Application - ProMART -->
@@ -119,7 +227,9 @@
 	<properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<dirigible.version>3.2.1</dirigible.version>
+		<dirigible.version>3.2.2</dirigible.version>
+		<jsr250-api.version>1.0</jsr250-api.version>
+		<jetty.version>9.4.5.v20170502</jetty.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<logback.version>1.2.3</logback.version>
 	</properties>
