@@ -66,110 +66,110 @@
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-commons-config</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 	
 		<!-- API -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-api</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- Repository -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-repository</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-repository-local</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- Database -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-database</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-database-h2</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-database-custom</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- Core Services -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-core</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- Services -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-services</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-engine</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- CMS -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-cms-api</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-cms-internal</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- BPM -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-bpm</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- IDE Plugins -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-ide</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- Templates Plugins -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-templates</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- Resources Plugins -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-resources</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- External API modules -->
 		<dependency>
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-ext-qunit</artifactId>
-		 	<version>3.2.3</version>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
 		<!-- External -->
@@ -227,7 +227,7 @@
 	<properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<dirigible.version>3.2.2</dirigible.version>
+		<dirigible.version>3.2.3</dirigible.version>
 		<jsr250-api.version>1.0</jsr250-api.version>
 		<jetty.version>9.4.5.v20170502</jetty.version>
 		<slf4j.version>1.7.5</slf4j.version>
