@@ -4,7 +4,7 @@ angular.module('page')
 	var messageHub = new FramesMessageHub();
 
 	var message = function(evtName, data){
-		messageHub.post({data: data}, 'promart.Registry.Components.' + evtName);
+		messageHub.post({data: data}, 'promart.Accounts.Customers.' + evtName);
 	};
 
 	var on = function(topic, callback){
@@ -15,19 +15,7 @@ angular.module('page')
 		message: message,
 		on: on,
 		onEntityRefresh: function(callback) {
-			on('promart.Registry.Components.refresh', callback);
-		},
-		onIndustriesModified: function(callback) {
-			on('promart.Registry.Industries.modified', callback);
-		},
-		onCategoriesModified: function(callback) {
-			on('promart.Registry.Categories.modified', callback);
-		},
-		onLicensesModified: function(callback) {
-			on('promart.Registry.Licenses.modified', callback);
-		},
-		onDevelopersModified: function(callback) {
-			on('promart.Registry.Developers.modified', callback);
+			on('promart.Accounts.Customers.refresh', callback);
 		},
 		messageEntityModified: function() {
 			message('modified');
@@ -36,57 +24,13 @@ angular.module('page')
 }])
 .controller('PageController', function ($scope, $http, $messageHub) {
 
-	var api = '/services/v3/js/promart/api/Registry/Components.js';
-	var industryOptionsApi = '/services/v3/js/promart/api/Registry/Industries.js';
-	var categoryOptionsApi = '/services/v3/js/promart/api/Registry/Categories.js';
-	var licenseOptionsApi = '/services/v3/js/promart/api/Registry/Licenses.js';
-	var developerOptionsApi = '/services/v3/js/promart/api/Accounts/Developers.js';
-
-	$scope.industryOptions = [];
-
-	$scope.categoryOptions = [];
-
-	$scope.licenseOptions = [];
-
-	$scope.developerOptions = [];
+	var api = '/services/v3/js/promart/api/Accounts/Customers.js';
 
 	$scope.dateOptions = {
 		startingDay: 1
 	};
 	$scope.dateFormats = ['yyyy/MM/dd', 'dd-MMMM-yyyy', 'dd.MM.yyyy', 'shortDate'];
 	$scope.dateFormat = $scope.dateFormats[0];
-
-	function industryOptionsLoad() {
-		$http.get(industryOptionsApi)
-		.success(function(data) {
-			$scope.industryOptions = data;
-		});
-	}
-	industryOptionsLoad();
-
-	function categoryOptionsLoad() {
-		$http.get(categoryOptionsApi)
-		.success(function(data) {
-			$scope.categoryOptions = data;
-		});
-	}
-	categoryOptionsLoad();
-
-	function licenseOptionsLoad() {
-		$http.get(licenseOptionsApi)
-		.success(function(data) {
-			$scope.licenseOptions = data;
-		});
-	}
-	licenseOptionsLoad();
-
-	function developerOptionsLoad() {
-		$http.get(developerOptionsApi)
-		.success(function(data) {
-			$scope.developerOptions = data;
-		});
-	}
-	developerOptionsLoad();
 
 	$scope.dataPage = 1;
 	$scope.dataCount = 0;
@@ -181,44 +125,8 @@ angular.module('page')
 		});
 	};
 
-	$scope.industryOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.industryOptions.length; i ++) {
-			if ($scope.industryOptions[i].Id === optionKey) {
-				return $scope.industryOptions[i].Name;
-			}
-		}
-		return null;
-	};
-	$scope.categoryOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.categoryOptions.length; i ++) {
-			if ($scope.categoryOptions[i].Id === optionKey) {
-				return $scope.categoryOptions[i].Name;
-			}
-		}
-		return null;
-	};
-	$scope.licenseOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.licenseOptions.length; i ++) {
-			if ($scope.licenseOptions[i].Id === optionKey) {
-				return $scope.licenseOptions[i].Name;
-			}
-		}
-		return null;
-	};
-	$scope.developerOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.developerOptions.length; i ++) {
-			if ($scope.developerOptions[i].Id === optionKey) {
-				return $scope.developerOptions[i].Name;
-			}
-		}
-		return null;
-	};
 
 	$messageHub.onEntityRefresh($scope.loadPage($scope.dataPage));
-	$messageHub.onIndustriesModified(industryOptionsLoad);
-	$messageHub.onCategoriesModified(categoryOptionsLoad);
-	$messageHub.onLicensesModified(licenseOptionsLoad);
-	$messageHub.onDevelopersModified(developerOptionsLoad);
 
 	function toggleEntityModal() {
 		$('#entityModal').modal('toggle');
