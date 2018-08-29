@@ -80,8 +80,8 @@
 	<security-constraint>
 	    <web-resource-collection>
 	        <web-resource-name>IDE Services</web-resource-name>
-	        <url-pattern>/services/v3/ide/*</url-pattern>
-	        <url-pattern>/websockets/v3/ide/*</url-pattern>
+	        <url-pattern>/services/v3/web/ide/*</url-pattern>
+			<url-pattern>/services/v3/js/ide/*</url-pattern>
 	    </web-resource-collection>
 	    <auth-constraint>
 	        <role-name>Developer</role-name>
@@ -91,8 +91,8 @@
 	<security-constraint>
 	    <web-resource-collection>
 	        <web-resource-name>ProMART</web-resource-name>
-	        <url-pattern>/services/v3/js/promart/api/*</url-pattern>
 			<url-pattern>/services/v3/web/promart/*</url-pattern>
+	        <url-pattern>/services/v3/js/promart/api/*</url-pattern>
 	    </web-resource-collection>
 	    <auth-constraint>
 	        <role-name>Admin</role-name>
