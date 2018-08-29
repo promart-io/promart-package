@@ -13,23 +13,10 @@
 			<param-name>javax.ws.rs.Application</param-name>
 			<param-value>org.eclipse.dirigible.runtime.core.app.DirigibleApplication</param-value>
 		</init-param>
-		
-		<!-- 
-		<init-param>
-			<param-name>jaxrs.inInterceptors</param-name>
-			<param-value>org.apache.cxf.interceptor.LoggingInInterceptor</param-value>
-		</init-param>
-		<init-param>
-			<param-name>jaxrs.outInterceptors</param-name>
-			<param-value>org.apache.cxf.interceptor.LoggingOutInterceptor</param-value>
-		</init-param>
-		 -->
-		 
 		<init-param>
 		    <param-name>jaxrs.features</param-name>
             <param-value>org.apache.cxf.jaxrs.swagger.Swagger2Feature</param-value>
         </init-param>
-		 
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
@@ -69,13 +56,14 @@
 		<filter-name>DoSFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
-	<!-- <resource-ref>
-		<res-ref-name>jdbc/DefaultDB</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-		<res-sharing-scope>Shareable</res-sharing-scope>
-	</resource-ref> -->
+	<filter>
+		<filter-name>CorsFilter</filter-name>
+		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CorsFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 	
 	<login-config>
         <auth-method>BASIC</auth-method>
@@ -87,30 +75,6 @@
 			<web-resource-name>Landing Page</web-resource-name>
 			<url-pattern>/index.html</url-pattern>
 		</web-resource-collection>
-	</security-constraint>
-	
-	<!-- Themes -->
-	<security-constraint>
-		<web-resource-collection>
-			<web-resource-name>Themes</web-resource-name>
-			<url-pattern>/services/v3/core/theme/*</url-pattern>
-			<url-pattern>/services/v3/web/resources/*</url-pattern>
-		</web-resource-collection>
-	</security-constraint>
-	
-	<security-constraint>
-	    <web-resource-collection>
-	        <web-resource-name>Engine Services</web-resource-name>
-	        <url-pattern>/services/v3/web/*</url-pattern>
-	        <url-pattern>/services/v3/js/*</url-pattern>
-	        <url-pattern>/services/v3/nashorn/*</url-pattern>
-	        <url-pattern>/services/v3/rhino/*</url-pattern>
-	        <url-pattern>/services/v3/v8/*</url-pattern>
-	        <url-pattern>/services/v3/wiki/*</url-pattern>
-	    </web-resource-collection>
-	    <auth-constraint>
-	        <role-name>Everyone</role-name>
-	    </auth-constraint>
 	</security-constraint>
 
 	<security-constraint>
@@ -126,45 +90,21 @@
 	
 	<security-constraint>
 	    <web-resource-collection>
-	        <web-resource-name>Core Services</web-resource-name>
-	        <url-pattern>/services/v3/core/*</url-pattern>
-	        <url-pattern>/websockets/v3/core/*</url-pattern>
+	        <web-resource-name>ProMART</web-resource-name>
+	        <url-pattern>/services/v3/js/promart/api/*</url-pattern>
+			<url-pattern>/services/v3/web/promart/*</url-pattern>
 	    </web-resource-collection>
 	    <auth-constraint>
-	        <role-name>Operator</role-name>
-	    </auth-constraint>
-	</security-constraint>
-	
-	<security-constraint>
-	    <web-resource-collection>
-	        <web-resource-name>Operations Services</web-resource-name>
-	        <url-pattern>/services/v3/ops/*</url-pattern>
-	        <url-pattern>/websockets/v3/ops/*</url-pattern>
-	    </web-resource-collection>
-	    <auth-constraint>
-	        <role-name>Operator</role-name>
-	    </auth-constraint>
-	</security-constraint>
-	
-	<security-constraint>
-	    <web-resource-collection>
-	        <web-resource-name>Transport Services</web-resource-name>
-	        <url-pattern>/services/v3/transport/*</url-pattern>
-	    </web-resource-collection>
-	    <auth-constraint>
-	        <role-name>Operator</role-name>
+	        <role-name>Admin</role-name>
 	    </auth-constraint>
 	</security-constraint>
 
 	<!-- Security roles -->
 	<security-role>
-	    <role-name>Everyone</role-name>
-	</security-role>
-	<security-role>
 	    <role-name>Developer</role-name>
 	</security-role>
 	<security-role>
-	    <role-name>Operator</role-name>
+	    <role-name>Admin</role-name>
 	</security-role>
 
 </web-app>
