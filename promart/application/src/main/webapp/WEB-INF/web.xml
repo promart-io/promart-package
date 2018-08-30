@@ -16,7 +16,7 @@
 		<init-param>
 		    <param-name>jaxrs.features</param-name>
             <param-value>org.apache.cxf.jaxrs.swagger.Swagger2Feature</param-value>
-        </init-param>
+        </init-param> 
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
@@ -51,20 +51,16 @@
 			<param-name>maxRequestsPerSec</param-name>
 			<param-value>3000</param-value>
 		</init-param>
+		<init-param>
+			<param-name>maxRequestMs</param-name>
+			<param-value>3600000</param-value>
+		</init-param>
 	</filter>
 	<filter-mapping>
 		<filter-name>DoSFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	<filter>
-		<filter-name>CorsFilter</filter-name>
-		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>CorsFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-	
+
 	<login-config>
         <auth-method>BASIC</auth-method>
     </login-config>
@@ -76,12 +72,36 @@
 			<url-pattern>/index.html</url-pattern>
 		</web-resource-collection>
 	</security-constraint>
+	
+	<!-- Themes -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Themes</web-resource-name>
+			<url-pattern>/services/v3/core/theme/*</url-pattern>
+			<url-pattern>/services/v3/web/resources/*</url-pattern>
+		</web-resource-collection>
+	</security-constraint>
+	
+	<security-constraint>
+	    <web-resource-collection>
+	        <web-resource-name>Engine Services</web-resource-name>
+	        <url-pattern>/services/v3/web/*</url-pattern>
+	        <url-pattern>/services/v3/js/*</url-pattern>
+	        <url-pattern>/services/v3/nashorn/*</url-pattern>
+	        <url-pattern>/services/v3/rhino/*</url-pattern>
+	        <url-pattern>/services/v3/v8/*</url-pattern>
+	        <url-pattern>/services/v3/wiki/*</url-pattern>
+	    </web-resource-collection>
+	    <auth-constraint>
+	        <role-name>Everyone</role-name>
+	    </auth-constraint>
+	</security-constraint>
 
 	<security-constraint>
 	    <web-resource-collection>
 	        <web-resource-name>IDE Services</web-resource-name>
-	        <url-pattern>/services/v3/web/ide/*</url-pattern>
-			<url-pattern>/services/v3/js/ide/*</url-pattern>
+	        <url-pattern>/services/v3/ide/*</url-pattern>
+	        <url-pattern>/websockets/v3/ide/*</url-pattern>
 	    </web-resource-collection>
 	    <auth-constraint>
 	        <role-name>Developer</role-name>
@@ -90,21 +110,45 @@
 	
 	<security-constraint>
 	    <web-resource-collection>
-	        <web-resource-name>ProMART</web-resource-name>
-			<url-pattern>/services/v3/web/promart/*</url-pattern>
-	        <url-pattern>/services/v3/js/promart/api/*</url-pattern>
+	        <web-resource-name>Core Services</web-resource-name>
+	        <url-pattern>/services/v3/core/*</url-pattern>
+	        <url-pattern>/websockets/v3/core/*</url-pattern>
 	    </web-resource-collection>
 	    <auth-constraint>
-	        <role-name>Admin</role-name>
+	        <role-name>Operator</role-name>
+	    </auth-constraint>
+	</security-constraint>
+	
+	<security-constraint>
+	    <web-resource-collection>
+	        <web-resource-name>Operations Services</web-resource-name>
+	        <url-pattern>/services/v3/ops/*</url-pattern>
+	        <url-pattern>/websockets/v3/ops/*</url-pattern>
+	    </web-resource-collection>
+	    <auth-constraint>
+	        <role-name>Operator</role-name>
+	    </auth-constraint>
+	</security-constraint>
+	
+	<security-constraint>
+	    <web-resource-collection>
+	        <web-resource-name>Transport Services</web-resource-name>
+	        <url-pattern>/services/v3/transport/*</url-pattern>
+	    </web-resource-collection>
+	    <auth-constraint>
+	        <role-name>Operator</role-name>
 	    </auth-constraint>
 	</security-constraint>
 
 	<!-- Security roles -->
 	<security-role>
+	    <role-name>Everyone</role-name>
+	</security-role>
+	<security-role>
 	    <role-name>Developer</role-name>
 	</security-role>
 	<security-role>
-	    <role-name>Admin</role-name>
+	    <role-name>Operator</role-name>
 	</security-role>
 
 </web-app>

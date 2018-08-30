@@ -1,20 +1,15 @@
 apiVersion: v1
-kind: Namespace
-metadata:
-  name: promart
----
-apiVersion: v1
 kind: Service
 metadata:
   name: promart
-  namespace: promart
+  namespace: zeus
   labels:
-    app: promart
+    zeus-application: promart
 spec:
   ports:
   - port: 8080
     name: promart
-  type: NodePort
+  type: ClusterIP
   selector:
     app: promart
 ---
@@ -22,20 +17,19 @@ apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
   name: promart
-  namespace: promart
+  namespace: zeus
 spec:
   serviceName: "promart"
   replicas: 1
   template:
     metadata:
       labels:
-        app: promart
+        zeus-application: promart
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-        - name: dirigible
-          image: promart
-          imagePullPolicy: Never
+        - name: promart
+          image: promartio/promart:1.0.1
           ports:
             - containerPort: 8080
               name: promart
@@ -43,24 +37,22 @@ spec:
             - name: root
               mountPath: /usr/local/tomcat/dirigible
           env:
-            - name: localRepositoryRootFolder
-              value: /usr/local/tomcat/dirigible/repository
-            - name: localRepositoryRootFolderIsAbsolute
-              value: "true"
-            - name: localDatabaseRootFolder
-              value: /usr/local/tomcat/dirigible/derby
-            - name: localCmisRootFolder
-              value: /usr/local/tomcat/dirigible/cmis
-            - name: initLoggingDirectory
-              value: /tomcat/logs
-            - name: repositoryProviderMaster
-              value: git
-            - name: masterRepositoryGitTarget
-              value: master_git_repository
-            - name: masterRepositoryGitLocation
-              value: https://github.com/dirigiblelabs/promart_setup.git
-            - name: masterRepositoryGitBranch
-              value: origin/master
+            - name: DIRIGIBLE_DATABASE_PROVIDER
+              value: "local"
+            - name: DIRIGIBLE_HOME_URL
+              value: "/services/v3/web/promart/"
+            - name: DIRIGIBLE_THEME_DEFAULT
+              value: "florence"
+            - name: KEYCLOAK_CONFIDENTIAL_PORT
+              value: "443"
+            - name: KEYCLOAK_SSL_REQUIRED
+              value: "none"
+            - name: KEYCLOAK_CLIENT_ID
+              value: "platform"
+            - name: KEYCLOAK_REALM
+              value: "ProMART-Platform"
+            - name: KEYCLOAK_AUTH_SERVER_URL
+              value: "https://auth.ingress.dev.promart.shoot.canary.k8s-hana.ondemand.com/auth"
       serviceAccountName: promart
   volumeClaimTemplates:
     - metadata:
@@ -75,50 +67,22 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
     kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/cluster-issuer: letsencrypt-production
+    kubernetes.io/ingress.class: "nginx"
   name: promart
-  namespace: promart
+  namespace: zeus
 spec:
+  tls:
+  - hosts:
+    - promart.ingress.dev.promart.shoot.canary.k8s-hana.ondemand.com
+    secretName: promart-certificate
   rules:
-    - host: promart.apps.eu-central-1.sap.onvms.com
+    - host: promart.ingress.dev.promart.shoot.canary.k8s-hana.ondemand.com
       http:
         paths:
           - path: /
             backend:
               serviceName: promart
               servicePort: 8080
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: promart
-  namespace: promart
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: promart
-rules:
-  - apiGroups:
-    - '*'
-    resources:
-    - '*'
-    verbs:
-    - '*'
-  - nonResourceURLs:
-    - '*'
-    verbs:
-    - '*'
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: promart
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: promart
-subjects:
-  - kind: ServiceAccount
-    name: promart
-    namespace: promart
