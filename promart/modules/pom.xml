@@ -23,6 +23,7 @@
 
 	<modules>
 		<module>promart</module>
+		<module>marketplace</module>
 		<module>data</module>
 	</modules>
 

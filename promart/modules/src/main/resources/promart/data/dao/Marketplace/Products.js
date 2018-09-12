@@ -42,6 +42,15 @@ var dao = daoApi.create({
 			'column': 'PRODUCT_COUNTRY',
 			'type': 'INTEGER',
 			'required': true
+		}, {
+			'name': 'Solution',
+			'column': 'PRODUCT_SOLUTION',
+			'type': 'INTEGER',
+			'required': true
+		}, {
+			'name': 'Image',
+			'column': 'PRODUCT_IMAGE',
+			'type': 'VARCHAR',
 		}]
 });
 exports.list = function(settings) {

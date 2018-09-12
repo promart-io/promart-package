@@ -218,7 +218,7 @@
                         "primaryKey": true,
                         "identity": true,
                         "nullable": true,
-                        "name": "ID"
+                        "name": "SOLUTION_ID"
                     }, {
                         "type": "VARCHAR",
                         "length": 64,
@@ -228,6 +228,16 @@
                         "length": 512,
                         "nullable": true,
                         "name": "SOLUTION_DESCRIPTION"
+                    }, {
+                        "type": "VARCHAR",
+                        "length": 128,
+                        "nullable": true,
+                        "name": "SOLUTION_REPOSITORY"
+                    }, {
+                        "type": "VARCHAR",
+                        "length": 128,
+                        "nullable": true,
+                        "name": "SOLUTION_URI"
                     }]
             }, {
                 "name": "PROMART_SOLUTION_COMPONENTS",
@@ -291,6 +301,15 @@
                         "type": "INTEGER",
                         "length": 0,
                         "name": "PRODUCT_COUNTRY"
+                    }, {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "name": "PRODUCT_SOLUTION"
+                    }, {
+                        "type": "VARCHAR",
+                        "length": 255,
+                        "nullable": true,
+                        "name": "PRODUCT_IMAGE"
                     }]
             }, {
                 "name": "PROMART_PRODUCT_PLANS",
