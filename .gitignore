@@ -4,6 +4,7 @@ dist/
 target/
 dirigible_local/
 bin/
+promart/modules/src/
 
 # files
 .DS_Store
