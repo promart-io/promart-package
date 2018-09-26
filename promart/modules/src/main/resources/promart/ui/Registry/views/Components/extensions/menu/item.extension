@@ -1,5 +1,0 @@
-{
-	"description": "Components menu",
-	"extensionPoint": "shell-promart-menu",
-	"module": "promart/views/Components/menu/item.js"
-}

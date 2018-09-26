@@ -25,6 +25,7 @@
 		<module>promart</module>
 		<module>marketplace</module>
 		<module>data</module>
+		<module>runtime</module>
 	</modules>
 
 	<properties>

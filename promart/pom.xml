@@ -36,7 +36,6 @@
 
 	<modules>
 		<module>modules</module>
-		<module>application</module>
 	</modules>
 
 	<properties>

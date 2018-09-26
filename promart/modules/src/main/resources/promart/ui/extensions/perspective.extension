@@ -1,5 +1,0 @@
-{
-	"description": "Home perspective",
-	"extensionPoint": "launchpad-promart-perspective",
-	"module": "promart/ui/extensions/perspective.js"
-}
