@@ -1,0 +1,62 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: platform
+  namespace: zeus
+  labels:
+    zeus-application: platform
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      zeus-application: platform
+  template:
+    metadata:
+      labels:
+        zeus-application: platform
+    spec:
+      containers:
+        - name: platform
+          imagePullPolicy: Always
+          image: promartio/promart
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DIRIGIBLE_DATABASE_PROVIDER
+              value: "custom"
+            - name: DIRIGIBLE_DATABASE_CUSTOM_DATASOURCES
+              value: "POSTGRES"
+            - name: DIRIGIBLE_DATABASE_DATASOURCE_NAME_DEFAULT
+              value: "POSTGRES"
+            - name: POSTGRES_DRIVER
+              value: "org.postgresql.Driver"
+            - name: POSTGRES_URL
+              value: "jdbc:postgresql://postgre-promart-jdbc.zeus:5432/promart"
+            - name: POSTGRES_USERNAME
+              value: "promart"
+            - name: POSTGRES_PASSWORD
+              value: "promart"
+            - name: DIRIGIBLE_SCHEDULER_DATABASE_DRIVER
+              value: "org.postgresql.Driver"
+            - name: DIRIGIBLE_SCHEDULER_DATABASE_URL
+              value: "jdbc:postgresql://postgre-promart-jdbc.dirigible:5432/promart"
+            - name: DIRIGIBLE_SCHEDULER_DATABASE_USER
+              value: "promart"
+            - name: DIRIGIBLE_SCHEDULER_DATABASE_PASSWORD
+              value: "promart"
+            - name: DIRIGIBLE_SCHEDULER_DATABASE_DELEGATE
+              value: "org.quartz.impl.jdbcjobstore.PostgreSQLDelegate"
+            - name: DIRIGIBLE_HOME_URL
+              value: "/services/v3/web/promart/"
+            - name: DIRIGIBLE_THEME_DEFAULT
+              value: "florence"
+            - name: KEYCLOAK_CONFIDENTIAL_PORT
+              value: "443"
+            - name: KEYCLOAK_SSL_REQUIRED
+              value: "none"
+            - name: KEYCLOAK_CLIENT_ID
+              value: "platform"
+            - name: KEYCLOAK_REALM
+              value: "ProMART-Platform"
+            - name: KEYCLOAK_AUTH_SERVER_URL
+              value: "https://auth.ingress.dev.promart.shoot.canary.k8s-hana.ondemand.com/auth"
